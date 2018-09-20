@@ -1,8 +1,9 @@
+/**Calvin Lam 9/18/18
+ *
+ */
 package CLam;
 
-import static CLam.CLamLib.cutOut;
-import static CLam.CLamLib.println;
-import static CLam.CLamLib.dateStr;
+import static CLam.CLamLib.*;
 
 public class TestFile
 {
@@ -11,5 +12,8 @@ public class TestFile
         println("I love a cup of Java in the morning.");
         dateStr("mm/dd/yyyy");
         cutOut("supercomputerstar","computer");
+        primePrinter(3);
+        leastCommonMultiple(15);
+        isPalindrome("racecar");
     }
 }
