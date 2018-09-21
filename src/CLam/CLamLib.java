@@ -11,34 +11,28 @@ public class CLamLib
     }
     public static String dateStr(String day)
     {
-        /**Switch mm/dd/yyyy to dd-mm-yyyy
-         *
-         */
+
         String date = day.substring(3,5) + "-" + day.substring(0,2) + "-" + day.substring(6);
         System.out.println(date);
         return date;
     }
+    /**Switch mm/dd/yyyy to dd-mm-yyyy
+    *
+    */
     public static String cutOut(String mainStr, String subStr)
     {
-        /**Cuts out the second word from the first word
-         *
-         */
-        String word = mainStr.substring(0, mainStr.indexOf(subStr));
-        /**Letters before the second word
-         *
-         */
-        word += mainStr.substring(subStr.length() + mainStr.indexOf(subStr));
-        /**Letters after the second word
-         *
-         */
+
+        String word = mainStr.substring(0, mainStr.indexOf(subStr)); //Letters before the second word
+        word += mainStr.substring(subStr.length() + mainStr.indexOf(subStr)); //Letters after the second word
         System.out.println(word);
         return word;
     }
+    /**Cuts out the second word from the first word
+    *
+    */
     public static int sumUpTo(int num)
     {
-        /**Sums of number up to num
-         *
-         */
+
         int result = 0;
         for(int i = num; i > 0; i--)
         {
@@ -47,6 +41,9 @@ public class CLamLib
         System.out.println(result);
         return result;
     }
+    /**Sums of number up to num
+     *
+     */
     public static boolean isFibonnaci(int num)
     {
         int fib1 = 0;
@@ -55,7 +52,7 @@ public class CLamLib
         {
             fib1 = fib1 + fib2;
             fib2 = fib1 + fib2;
-            if (num == fib1 || num == fib2 || num == 0)
+            if (num == fib1 || num == fib2 || num == 0) //Checks if num is a Fibonnaci number
             {
                 System.out.println(true);
                 return true;
@@ -64,6 +61,10 @@ public class CLamLib
         System.out.println(false);
         return false;
     }
+
+    /**Fibonnaci sequence
+     *
+     */
     public static boolean isPalindrome(String word)
     {
         String backward = "";
@@ -71,7 +72,7 @@ public class CLamLib
         {
             backward += word.substring(i-1,i);
         }
-        if(backward.equals(word))
+        if(backward.equals(word)) //Checks if it is a Palindrome
         {
             System.out.println(true);
             return true;
@@ -82,4 +83,7 @@ public class CLamLib
             return false;
         }
     }
+    /**Palindrome
+     *
+     */
 }
