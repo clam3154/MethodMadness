@@ -22,7 +22,7 @@ public class CLamLib
         System.out.println(word);
         return word;
     }
-    public static int primePrinter(int num)
+    public static int sumUpTo(int num)
     {
         int result = 0;
         for(int i = num; i > 0; i--)
@@ -32,9 +32,22 @@ public class CLamLib
         System.out.println(result);
         return result;
     }
-    public static int leastCommonMultiple(int num)
+    public static boolean isFibonnaci(int num)
     {
-        return num;
+        int fib1 = 0;
+        int fib2 = 1;
+        while(fib1 <= num || fib2 <= num)
+        {
+            fib1 = fib1 + fib2;
+            fib2 = fib1 + fib2;
+            if (num == fib1 || num == fib2 || num == 0)
+            {
+                System.out.println(true);
+                return true;
+            }
+        }
+        System.out.println(false);
+        return false;
     }
     public static boolean isPalindrome(String word)
     {

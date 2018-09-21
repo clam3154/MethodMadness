@@ -12,8 +12,8 @@ public class TestFile
         println("I love a cup of Java in the morning.");
         dateStr("mm/dd/yyyy");
         cutOut("supercomputerstar","computer");
-        primePrinter(3);
-        leastCommonMultiple(15);
+        sumUpTo(15);
+        isFibonnaci(89);
         isPalindrome("racecar");
     }
 }
