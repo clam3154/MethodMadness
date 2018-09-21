@@ -11,19 +11,34 @@ public class CLamLib
     }
     public static String dateStr(String day)
     {
+        /**Switch mm/dd/yyyy to dd-mm-yyyy
+         *
+         */
         String date = day.substring(3,5) + "-" + day.substring(0,2) + "-" + day.substring(6);
         System.out.println(date);
         return date;
     }
     public static String cutOut(String mainStr, String subStr)
     {
+        /**Cuts out the second word from the first word
+         *
+         */
         String word = mainStr.substring(0, mainStr.indexOf(subStr));
+        /**Letters before the second word
+         *
+         */
         word += mainStr.substring(subStr.length() + mainStr.indexOf(subStr));
+        /**Letters after the second word
+         *
+         */
         System.out.println(word);
         return word;
     }
     public static int sumUpTo(int num)
     {
+        /**Sums of number up to num
+         *
+         */
         int result = 0;
         for(int i = num; i > 0; i--)
         {
